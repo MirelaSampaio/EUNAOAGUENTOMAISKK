@@ -1,0 +1,15 @@
+frase = input("Digite uma frase:\n")
+fator = input("Digite um fator entre 1 e 10:\n")
+posicao = 0
+tamanhoFrase = len(frase)
+fraseFinal = ""
+
+while posicao < tamanhoFrase:
+    letra = frase[posicao]
+    print(letra)
+    posicao += 1
+    numAscii = ord(letra)
+    numCripto = int(numAscii) - int(fator)
+    fraseFinal += chr(numCripto)
+
+print(fraseFinal)
